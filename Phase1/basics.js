@@ -287,4 +287,7 @@
 // example - let date = new Date();
 // console.log(date instanceof Date); // true
 
-//
+
+
+
+// use !! for true or false nature pta karne ke liye use krte hangingPunctuation:
