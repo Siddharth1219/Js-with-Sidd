@@ -1,2 +1,4 @@
 // What is BMI calculator?
 // BMI (Body Mass Index) calculator is a tool that helps to determine whether a person has a healthy body weight for a given height. It is calculated by dividing a person's weight in kilograms by the square of their height in meters. The resulting value is then used to categorize the individual into different weight status categories, such as underweight, normal weight, overweight, or obese.
+
+siddharth
