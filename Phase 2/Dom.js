@@ -8,7 +8,7 @@
 
 // dom Manupulation ke liye jana hoga -
 // html se elements ko select karna
-// text badlm=b=na
+// text badlna
 // html bdlna
 // css bdlna
 // attributes bdlna
@@ -55,8 +55,8 @@ console.log(discrip);
 
 
 // 4. querySelectorAll() - ye method ek element ko select karta hai jiska css selector diya gaya ho.
-let All = document.querySelectorAll(".All");
-console.log(All);
+let h3 = document.querySelectorAll("h3");
+console.log(h3);
 
 
 
