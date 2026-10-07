@@ -59,7 +59,10 @@ p.removeEventListener("dblclick", dblclick);
 
 
 
+
 // **********************Commmmon Events in JavaScript**********************
+
+
 
 
 // 1. Input Events: These events are triggered when the user interacts with input elements, such as text fields, checkboxes, radio buttons, etc. Common input events include:
@@ -81,7 +84,18 @@ inputField.addEventListener("input", function(details) {
 
 
 
+
+
+
+
+
 // 2. click event already done in upper section
+
+
+
+
+
+
 
 
 // 3. change event: This event is triggered when the value of an input element changes and loses focus.
@@ -104,12 +118,7 @@ selectElement.addEventListener("change", function(details) {
 
 
 
-
-
-
-
-
-// approach 2 for change event
+// approach 1st for change event (isme maine apne screen pe keyboard ke key press karne par uska name show karne ka code likha hai and space dabane se space likhega control dbane se ctrl likhega, etc)
 
 let h11 = document.querySelector("h1"); //use h1  h11 ke jagah par
 
@@ -127,4 +136,28 @@ window.addEventListener("keyup", function(dets) {
 
 
 
-//
+// approach 2nd for buttun click event
+
+let btn = document.querySelector("#btn");
+let fileinput = document.querySelector("#fileinput");
+
+btn.addEventListener("click", function() {
+    fileinput.click(); //this will trigger the click event on the file input element
+});
+
+fileinput.addEventListener("change", function(details) {
+    const file = details.target.files[0]; //this will get the first selected file
+    if (file) {
+        btn.textContent = file.name; //this will print the name of the selected file
+    }
+});
+
+
+
+
+
+
+
+
+// 4. Submit event: This event is triggered when a form is submitted.
+// It is commonly used to validate form data before sending it to the server or to perform custom actions upon form submission.

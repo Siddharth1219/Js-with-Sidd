@@ -19,9 +19,7 @@
         }
         
         #main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 30px;
             width: 100%;
             height: 100%;
             background-color: #222;
@@ -35,16 +33,46 @@
             user-select: none;
             /* Prevent text selection off */
         }
+        
+        input {
+            display: block;
+        }
+        
+        #btn {
+            padding: 12px 22px;
+            background-color: #555;
+            color: #888686;
+            font-size: 1.5rem;
+            border-radius: 30rem;
+        }
+        
+        #btn:hover {
+            background-color: #3d3c3c;
+            color: #827e7e;
+        }
     </style>
 </head>
 
 <body>
-
-
     <div id="main">
-        <h1>a</h1>
-
+        <form action="">
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your email">
+            <input type="text" placeholder="Enter your Age">
+            <input type="text" placeholder="profile pic">
+            <input type="submit" value="Submit">
+        </form>
     </div>
+    <!--
+    <div id="main">
+        <input id="fileinput" type="file">
+        <div id="btn">
+            Upload File
+        </div>
+
+        <!-- <h1>a</h1> -->
+
+    </div> -->
 
 
     <div></div>
