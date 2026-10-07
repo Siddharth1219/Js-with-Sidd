@@ -15,7 +15,8 @@
 //  such as a button, link, or any other clickable element. You can use the click
 //  event to perform actions like submitting a form, opening a modal, or navigating to another page.
 
-let h1 = document.querySelector("h1");
+
+let h1 = document.querySelector("h1"); //use h1 when niche wala coomment laga ho 
 h1.addEventListener("click", function() {
     h1.style.color = "red";
 
@@ -97,3 +98,33 @@ selectElement.addEventListener("change", function(details) {
     //this will print the selected value of the select element
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// approach 2 for change event
+
+let h11 = document.querySelector("h1"); //use h1  h11 ke jagah par
+
+window.addEventListener("keyup", function(dets) {
+    if (dets.key === " ") {
+        h1.textContent = "SPACE";
+    } else {
+        h1.textContent = dets.key;
+    }
+    // console.log(dets);
+});
+
+
+
+
+
+
+//

@@ -61,7 +61,6 @@
 
 
 
-
 // 10. select all <li> elements and print their text using a loop
 // let items = document.querySelectorAll('li');
 // for (let i = 0; i < items.length; i++) {
@@ -111,7 +110,7 @@
 // If the attribute already exists, its value will be updated; if it does not exist, a new attribute will be created with the specified name and value. 
 // For example:
 // let link = document.querySelector('a');
-// link.setAttribute('href', 'https://www.example.com');
+// link.setAttribute('href', 'https://www.example.com');       href is an attribute and the link is the value of the attribute
 
 
 
