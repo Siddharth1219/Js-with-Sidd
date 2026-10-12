@@ -177,51 +177,127 @@
 
 
 
-//  for making a card
+// //  for making a card
 
-let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input");
-let main = document.querySelector("#main");
+// let form = document.querySelector("form");
+// let inputs = document.querySelectorAll("input");
+// let main = document.querySelector("#main");
 
-form.addEventListener("submit", function(details) {
-    details.preventDefault();
+// form.addEventListener("submit", function(details) {
+//     details.preventDefault();
 
-    let card = document.createElement("div");
-    card.classList.add("card");
+//     let card = document.createElement("div");
+//     card.classList.add("card");
 
-    let profile = document.createElement("div");
-    profile.classList.add("profile");
+//     let profile = document.createElement("div");
+//     profile.classList.add("profile");
 
-    let img = document.createElement("img");
-    img.setAttribute("src", inputs[0].value);
+//     let img = document.createElement("img");
+//     img.setAttribute("src", inputs[0].value);
 
-    let h3 = document.createElement("h3");
-    h3.textContent = inputs[1].value;
+//     let h3 = document.createElement("h3");
+//     h3.textContent = inputs[1].value;
 
-    let h5 = document.createElement("h5");
-    h5.textContent = inputs[2].value;
+//     let h5 = document.createElement("h5");
+//     h5.textContent = inputs[2].value;
 
-    let p = document.createElement("p");
-    p.textContent = inputs[3].value;
+//     let p = document.createElement("p");
+//     p.textContent = inputs[3].value;
 
-    profile.appendChild(img);
-    card.appendChild(profile);
+//     profile.appendChild(img);
+//     card.appendChild(profile);
 
-    card.appendChild(h3);
-    card.appendChild(h5);
-    card.appendChild(p);
+//     card.appendChild(h3);
+//     card.appendChild(h5);
+//     card.appendChild(p);
 
-    main.appendChild(card);
+//     main.appendChild(card);
 
-    inputs.forEach(function(input) {
-        if (input.type !== "submit") {
-            input.value = ""; //this will clear the value of the input field
-        }
+//     inputs.forEach(function(input) {
+//         if (input.type !== "submit") {
+//             input.value = ""; //this will clear the value of the input field
+//         }
 
-    });
-});
-
-
+//     });
+// });
 
 
-// **************************Mouse Over and Mouse Move****************************
+
+
+
+// // **************************Mouse Over, mouseout and Mouse Move****************************
+
+
+
+// // Mouse move event: This event is triggered when the user moves the mouse pointer over an element. It can be used to create interactive effects, such as highlighting elements, displaying tooltips, or tracking mouse movements.
+// let abc = document.querySelector("#abc");
+// abc.addEventListener("mouseover", function() {
+//     abc.style.backgroundColor = "red";
+// });
+
+
+
+// // Mouse out event: This event is triggered when the user moves the mouse pointer out of an element. It can be used to revert changes made during a mouseover event or to perform cleanup actions.
+// abc.addEventListener("mouseout", function() {
+//     abc.style.backgroundColor = "#222";
+// });
+
+
+
+// // Mouse move event: This event is triggered when the user moves the mouse pointer over an element. It can be used to create interactive effects, such as highlighting elements, displaying tooltips, or tracking mouse movements.
+// window.addEventListener("mousemove", function(details) {
+//     console.log(`Mouse X: ${details.clientX}, Mouse Y: ${details.clientY}`); //this will print the current mouse position in the console
+
+// });
+
+
+
+
+// //  using mousemove event to change the background color of the page based on the mouse position
+// let abc = document.querySelector("#abc");
+// window.addEventListener("mousemove", function(details) {
+//     abc.style.top = details.clientY + "px"; //this will set the top position of the div to the current mouse Y position
+//     abc.style.left = details.clientX + "px"; //this will set the left position of the div to the current mouse X position
+// });
+
+
+
+
+
+// // *******************key up*******************
+
+// // it is a keyboard event that is triggered when a key is released after being pressed.
+// //  It can be used to capture user input, perform actions based on specific key combinations, or implement keyboard shortcuts.
+
+
+
+
+
+
+
+
+
+// ***************************Event Objects***********************
+
+// target: The target property of the event object refers to the element that triggered the event. It allows you to access and manipulate the specific element that the event occurred on.
+
+// preventdefault(): The preventDefault() method is used to prevent the default behavior of an event. For example, in a form submission event, calling preventDefault() will prevent the form from being submitted and allow you to handle the submission manually.
+
+// type : The type property of the event object indicates the type of event that occurred, such as "click", "keydown", "submit", etc. It allows you to identify the specific event that triggered the event handler.
+
+
+
+
+
+
+
+// ********************************Event Bubbling and Capturing***********************
+
+
+// event bubling: Event bubbling is a concept in JavaScript where an event starts from the innermost element (the target) and propagates up through its parent elements in the DOM hierarchy. This means that when an event occurs on a child element, it will also trigger the same event on its parent elements unless explicitly stopped. Event bubbling allows for event delegation, where you can attach a single event listener to a parent element and handle events for its child elements.
+// jispe event ayega agr uspe listner nhi hua to humara event uspe bhi trigger hoga
+
+
+
+
+ 
