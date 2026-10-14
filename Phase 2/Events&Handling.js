@@ -291,6 +291,7 @@
 
 
 
+
 // ********************************Event Bubbling and Capturing***********************
 
 
@@ -298,6 +299,56 @@
 // jispe event ayega agr uspe listner nhi hua to humara event uspe bhi trigger hoga
 
 
+// document.querySelector("#nav").addEventListener("click", function() {
+//     alert("nav clicked");
+// });
 
 
- 
+
+// let ul = document.querySelector("ul");
+// ul.addEventListener("click", function(details) {
+//     details.target.style.textDecoration = "line-through"; //this will add a line-through style to the clicked list item
+//     console.log(details.target); //this will print the clicked list item in the console
+// });
+
+
+
+
+// let ul = document.querySelector("ul");
+// ul.addEventListener("click", function(details) {
+//     details.target.classList.toggle("lt"); //this will toggle the line-through style on the clicked list item
+
+// });
+
+
+
+
+
+// ***************************Capturing Phase***********************
+
+// event capturing: Event capturing is the opposite of event bubbling. In event capturing, the event starts from the outermost element and propagates down to the target element. This means that when an event occurs on a child element, it will first trigger the event on its parent elements before reaching the target element. Event capturing allows for more control over event handling and can be useful in certain scenarios where you want to intercept events before they reach their intended target.
+
+
+
+
+
+// event bublling me event ander se bahar ki trf jata hai
+// event capturing me event bahar se ander ki trf jata hai
+
+
+// jab bhi app click krte ho ya koii bhi event raise krte ho to
+// apka jo event flow do phases mein chalta hai:
+
+// 1. Phase -- event top level element se neeche ki trf aayega
+// 2. Phase -- event bottom level element se upar ki trf aayega
+
+// aur pehle phase 1 hoti hai.
+
+// capturing phase ek bar phirse padh lena 
+
+
+
+
+// event delegation: Event delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of attaching individual event listeners to each child element.
+//  This allows you to handle events for multiple child elements efficiently, especially when the child elements are dynamically added or removed from the DOM. Event delegation takes advantage of event bubbling, 
+// where events propagate up the DOM tree, allowing the parent element to capture and handle events triggered by its child elements.
