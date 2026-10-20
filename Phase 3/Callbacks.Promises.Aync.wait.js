@@ -61,4 +61,134 @@
 
 
 
+// ------------------------Promises: resolve, reject, then, catch-----------------------
 
+
+// // Promises are a way to handle asynchronous operations in JavaScript. A promise represents a value that may be available now, or in the future, or never. It can be in one of three states: pending, fulfilled, or rejected.
+
+// // Example of Promises:
+function fetchDataPromise() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = { name: 'John', age: 30 };
+            resolve(data);
+        }, 2000);
+    });
+}
+
+fetchDataPromise()
+    .then((data) => {
+        console.log('Data received:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    }); 
+
+
+
+
+
+
+
+
+
+    
+ // Chaining async operations with Promises
+
+    function fetchUserPromise(userId) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const user = { id: userId, name: 'John' };
+                resolve(user);
+            }, 1000);
+        });
+    }
+
+    function fetchPostsPromise(userId) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const posts = [{ id: 1, title: 'Post 1' }, { id: 2, title: 'Post 2' }];
+                resolve(posts);
+            }, 1000);
+        });
+    }
+
+    fetchUserPromise(1)
+        .then((user) => {
+            console.log('User:', user);
+            return fetchPostsPromise(user.id);
+        })
+        .then((posts) => {
+            console.log('Posts:', posts);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+
+
+
+
+
+
+
+// // ------------------------async/await syntax, error handling with try- catch-----------------------
+
+// // async/await is a syntax that allows you to write asynchronous code in a synchronous manner. It makes the code easier to read and understand. The async keyword is used to declare a function as asynchronous, and the await keyword is used to wait for a promise to resolve or reject.
+
+// // Example of async/await:
+async function fetchDataAsync() {
+    try {
+        const data = await fetchDataPromise();
+        console.log('Data received:', data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+fetchDataAsync();
+
+
+
+
+
+
+
+
+
+
+//  // Chaining async operations with async/await
+async function fetchUserAndPosts() {
+    try {
+        const user = await fetchUserPromise(1);
+        console.log('User:', user);
+        const posts = await fetchPostsPromise(user.id);
+        console.log('Posts:', posts);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+fetchUserAndPosts();
+
+
+
+
+
+
+// ------------------------Chaining async operations-----------------------   
+
+// Chaining async operations is the process of executing multiple asynchronous operations in a sequence, where each operation depends on the result of the previous one. This can be done using Promises or async/await syntax.  
+
+// Example of chaining async operations with Promises:
+fetchUserPromise(1)
+    .then((user) => {
+        console.log('User:', user);
+        return fetchPostsPromise(user.id);
+    })
+    .then((posts) => {
+        console.log('Posts:', posts);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });      
